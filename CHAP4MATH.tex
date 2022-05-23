@@ -48,422 +48,423 @@
 	\textbf{Exemple 1:}\\
 	Soit la matrice $A_{1}$ suivante:
 	\[\begin{pmatrix}
-	2 & 1  \\
-	1 & 2 \\
-	
-	\end{pmatrix}\] 
-Déterminer les valeurs propres de $A_{1}$.\\
-Réponse:
-\begin{itemize}
-	\item Cherchons le polynôme caractéristique de $A_{1}$\\
-	${P_{A_{1}}(\lambda)=det(A_{1}-\lambda I_{2})=\begin{vmatrix}
+		2 & 1  \\
+		1 & 2 \\
 		
-		2-\lambda&1\\
-		1&2-\lambda
-		\end{vmatrix}=(2-\lambda)^2-1}$ 
-	\item Pour déterminer les valeurs propres de $A$ il suffit de résoudre:\\
-	$P_{A_{1}}(\lambda)=0$ 
-\end{itemize}
-\textbf{Exemple 2:}\\
-Soit la matrice $A_{2}$ suivante:
-\[\begin{pmatrix}
-1 & 1  \\
-0 & 1 \\
-
-\end{pmatrix}\] 
-\url{https://youtu.be/vrru5an0DRM}\\
- \textbf{Remarques:}
- \begin{itemize}
- 	\item On dit que $\lambda$ est une valeur propre de multiplicité $\alpha$, si $\lambda$ est une racine d'ordre $\alpha$ de $P_{A}(\lambda)=0$.
- 	\item Si $A$ est une matrice carrée d'ordre $n$, $\lambda_{i}$ est une valeur propre de $A$ de multiplicité $\alpha_{i}$ alors $n=\sum_{i=1}^{p}\alpha_{i}$ (l'ordre de la matrice est égale à la somme de multiplicité de ces valeurs propres).
- 	\item Une valeur propre de multiplicité 1 est dite valeur propre simple.
- 	\item Une valeur propre de multiplicité $\alpha >1$ est dite valeur propre multiple.
- 	\begin{itemize}
- 		\item Si $\alpha=2$: Valeur propre double.
- 		\item Si $\alpha=3$: Valeur propre triple.
- 	\end{itemize}
- \end{itemize}
-
-\textbf{Propositions:}
-\begin{itemize}
-	\item Si $\lambda$ est une valeur propre non nulle d'une matrice inversible $A$, alors $\frac{1}{\lambda}$ est une valeur propre de $A^{-1}$.
-	\item Si $\lambda$ est une valeur propre non nulle d'une matrice $A$, alors  $\lambda ^{p}$ est une valeur propre de $A^p$.
-	\item Les valeurs propres d'une matrice triangulaire sont les éléments de sa diagonale principale.
-	\item La somme des valeurs propres de $A$ = trace($A$).
-	\item Le produit des valeurs propres de $A$ = $det(A)$.
-\end{itemize}
-\textbf{Exemples:}\\
-Donner les valeurs propres des matrices suivantes:
-\[B=\begin{pmatrix}
-	3 & 0 & 0  \\
-	1 & 3 & 0 \\
-	0 & 1 & 2
+	\end{pmatrix}\] 
+	Déterminer les valeurs propres de $A_{1}$.\\
+	Réponse:
+	\begin{itemize}
+		\item Cherchons le polynôme caractéristique de $A_{1}$\\
+		${P_{A_{1}}(\lambda)=det(A_{1}-\lambda I_{2})=\begin{vmatrix}
+				
+				2-\lambda&1\\
+				1&2-\lambda
+			\end{vmatrix}=(2-\lambda)^2-1}$ 
+		\item Pour déterminer les valeurs propres de $A$ il suffit de résoudre:\\
+		$P_{A_{1}}(\lambda)=0$ 
+	\end{itemize}
+	\textbf{Exemple 2:}\\
+	Soit la matrice $A_{2}$ suivante:
+	\[\begin{pmatrix}
+		1 & 1  \\
+		0 & 1 \\
+		
+	\end{pmatrix}\] 
+	\url{https://youtu.be/vrru5an0DRM}\\
+	\textbf{Remarques:}
+	\begin{itemize}
+		\item On dit que $\lambda$ est une valeur propre de multiplicité $\alpha$, si $\lambda$ est une racine d'ordre $\alpha$ de $P_{A}(\lambda)=0$.
+		\item Si $A$ est une matrice carrée d'ordre $n$, $\lambda_{i}$ est une valeur propre de $A$ de multiplicité $\alpha_{i}$ alors $n=\sum_{i=1}^{p}\alpha_{i}$ (l'ordre de la matrice est égale à la somme de multiplicité de ces valeurs propres).
+		\item Une valeur propre de multiplicité 1 est dite valeur propre simple.
+		\item Une valeur propre de multiplicité $\alpha >1$ est dite valeur propre multiple.
+		\begin{itemize}
+			\item Si $\alpha=2$: Valeur propre double.
+			\item Si $\alpha=3$: Valeur propre triple.
+		\end{itemize}
+	\end{itemize}
 	
-\end{pmatrix}	~~~~~~;~~~~~ C=\begin{pmatrix}
-1 & 0 & 0  \\
-0 & 2 & 0 \\
-0 & 0 & 4
-
-\end{pmatrix}\] 
-
-
-\subsection{Recherche des vecteurs propres:}
-\subsubsection{Théorème:}
-A une valeur propre $\lambda$, on associe une infinité des vecteurs propres tous colinéaires entre eux.\\ $V_{1}$, $V_{2}$ sont colinéaires : $V_{1}=\alpha V_{2}$\\
-\textbf{Exemple:}
-\[A=\begin{pmatrix}
-	1 & 0 & 0  \\
-	1 & 2 & 0 \\
-	1 & 0 & -1
-
-\end{pmatrix}\] 
-Déterminer les vecteurs propres de $A$.\\
-Réponse\\
-$A$ est une matrice triangulaire donc ses valeurs propres sont:\\
-$\lambda_{1}=1$; $\lambda_{2}=2$; $\lambda_{3}=-1$\\\\
-$V=\begin{pmatrix}
-	x  \\
-	y  \\
-	z
-	
-\end{pmatrix} \in \mathbb{R}^{3}$, est un vecteur propre de $A$ associé à $\lambda_{1}=1$, s'il vérifie l'égalité suivante:\\
-\[AV=\lambda_{1}V \rightarrow (A-I_{3})V=0\] 
-\[\begin{pmatrix}
-	0 & 0 & 0  \\
-	1 & 1 & 0 \\
-	1 & 0 & -2
-	
-\end{pmatrix}.\begin{pmatrix}
-	x   \\
-	y   \\
-	z 
-	
-\end{pmatrix}=\begin{pmatrix}
-0   \\
-0  \\
-0 
-
-\end{pmatrix}\] 
-\[det(A-I_{3})V=0\]
-\[\left \{
-\begin{array}{rcl}
-	x+y&=&0 \\
-	x-2z&=&0
-\end{array}
-\right. \Leftrightarrow \left \{
-\begin{array}{rcl}
-	y&=&-x \\
-	z&=&\frac{1}{2}x\\
-	x& \in& \mathbb{R}
-\end{array}
-\right.\Leftrightarrow \left \{
-\begin{array}{rcl}
-	x&=&x \\
-	y&=&-x\\
-	z&=&\frac{1}{2}x ~~~,~~~x \in \mathbb{R}
-	
-\end{array}
-\right.\]
-\[V=\begin{pmatrix}
-	x  \\
-	-x  \\
-	\frac{1}{2}
-	
-\end{pmatrix}=x.\begin{pmatrix}
-1  \\
--1  \\
-\frac{1}{2}
-
-\end{pmatrix}=x.V_{1}~~~,~~~ x \in \mathbb{R}\]
-L'ensemble des vecteurs propres de $A$ associé à $\lambda_{1}$, sont les vecteurs colinéaires à $V_{1}$, cet ensemble s'appelle sous-espace propre de $\lambda_{1}$, noté $E(\lambda_{1})$ et puisque tous les vecteurs de $E(\lambda_{1})$ sont colinéaires à $V_{1}$, on dit que $E(\lambda_{1})$ est engendré par $V_{1}$ et dimension de $E(\lambda_{1})=1$, on écrit $dim E(\lambda_{1}=1)$.\\
-$V=\begin{pmatrix}
-	x  \\
-	y  \\
-	z
-	
-\end{pmatrix} \in \mathbb{R}^{3}$, est un vecteur propre de $A$ associé à $\lambda_{2}=2$, s'il vérifie l'égalité suivante:\\
-\[AV=\lambda_{2}V \rightarrow (A-2I_{3})V=0\]
-\[\begin{pmatrix}
-	-1 & 0 & 0  \\
-	1 & 0 & 0 \\
-	1 & 0 & -3
-	
-\end{pmatrix}.\begin{pmatrix}
-	x   \\
-	y   \\
-	z 
-	
-\end{pmatrix}=\begin{pmatrix}
-	0   \\
-	0  \\
-	0 
-	
-\end{pmatrix}\] 
-\[det(A-2I_{3})V=0\]
-\[\left \{
-\begin{array}{rcl}
-	-x&=&0 \\
-	x&=&0\\
-	x-3z&=&0
-\end{array}
-\right. \Leftrightarrow \left \{
-\begin{array}{rcl}
-x&=&0 \\
-	y& \in& \mathbb{R}\\
-	z&=&0
-\end{array}
-\right.\Leftrightarrow \]
-\[V=\begin{pmatrix}
-	0  \\
-	y  \\
-	0
-	
-\end{pmatrix}=y.\begin{pmatrix}
-	0  \\
-	1  \\
-	0
-	
-\end{pmatrix}=y.V_{2}~~~,~~~ y \in \mathbb{R}\]
-Le sous-espace propre de $E(\lambda_{2})$ est engendré par $V_{2} $ et $dim E(\lambda_{2}=2)$\\
-$V=\begin{pmatrix}
-	x  \\
-	y  \\
-	z
-	
-\end{pmatrix} \in \mathbb{R}^{3}$, est un vecteur propre de $A$ associé à $\lambda_{3}=-1$, s'il vérifie l'égalité suivante:\\
-\[AV=\lambda_{3}V \rightarrow (A+I_{3})V=0\]
-\[\begin{pmatrix}
-	2 & 0 & 0  \\
-	1 & 3 & 0 \\
-	1 & 0 & 0
-	
-\end{pmatrix}.\begin{pmatrix}
-	x   \\
-	y   \\
-	z 
-	
-\end{pmatrix}=\begin{pmatrix}
-	0   \\
-	0  \\
-	0 
-	
-\end{pmatrix}\] 
-\[det(A+I_{3})V=0\]
-\[\left \{
-\begin{array}{rcl}
-	2x&=&0 \\
-	x+3y&=&0\\
-	x&=&0
-\end{array}
-\right. \Leftrightarrow \left \{
-\begin{array}{rcl}
-	x&=&0 \\
-	y&=&0\\
-	z&\in& \mathbb{R}
-\end{array}
-\right. \]
-\[V=\begin{pmatrix}
-	0  \\
-	0  \\
-	z
-	
-\end{pmatrix}=z.\begin{pmatrix}
-	0  \\
-	0  \\
-	1
-	
-\end{pmatrix}=z.V_{3}~~~,~~~ z \in \mathbb{R}\]
-Le sous-espace propre de $E(\lambda_{3})$ est engendré par $V_{3} $ et $dim E(\lambda_{3})=1$.\\
-\textbf{Exemple}\\
-Soit les matrices suivantes:
-\[A=\begin{pmatrix}
-	2 & 1  \\
-	1 & 2 
-	
-\end{pmatrix}~~~; ~~~B=\begin{pmatrix}
-1 & 1  \\
-0 & 1 
-
-\end{pmatrix}~~~; ~~~C=\begin{pmatrix}
-15 & -2 & 6  \\
-21 & -2 & 9\\
--28 & 4 & -11
-
-\end{pmatrix}
-\]
-Déterminer les vecteurs propres correspondants.
-\section{Diagonalisation des matrices:}
-\subsection{Définition:}
-$A$ est une matrice carrée, est diagonalisable s'il existe une matrice inversible \textcolor{red} {$P$}, dite \textcolor{red}{matrice de passage}, et une \textcolor{red}{ matrice diagonale} \textcolor{red}{D}. Tel que: \[A=P.D.P^{-1}\]
-\subsection{Théorème:}
-Pour qu'une matrice carrée $A$ soit diagonalisable, il faut et il suffit que la dimension de sous-espace propre associé à $\lambda_{i}$ égale à la multiplicité de cette valeur propre. $\lambda_{i}$\\
-$A$ est \textcolor{red}{diagonalisable ssi:}
-\[dim E(\lambda_{i})=\alpha_{i}\] Avec $\alpha_{i}$: multiplicité de $ \lambda_{i}$
-\textbf{Remarque:}\\
-\begin{itemize}
-	\item La matrice digonale $D$ est la matrice des valeurs propres.
-	\item La matrice de passage $P$ est la matrice des vecteurs propes.
-\end{itemize}
-\subsection{Exemple:}
-\[A=\begin{pmatrix}
-	2 & 1  \\
-	1 & 2 
-	
-\end{pmatrix}\]
-$\lambda_{1}=1$ : Valeur propre simple ($\alpha_{1}=1$).\\
-$\lambda_{2}=3$ : Valeur propre simple ($\alpha_{2}=1$).\\\\
-$V_{1}=\begin{pmatrix}
-	1  \\
-	-1  
-	
-\end{pmatrix}$ ~~~;~~~ \textcolor{red}{$dim E(\lambda_{1})=1=\alpha_{1}$}.\\
-$V_{2}=\begin{pmatrix}
-	1  \\
-	1  
-	
-\end{pmatrix}$ ~~~;~~~ \textcolor{red}{$dim E(\lambda_{2})=1=\alpha_{2}$}.\\
-\textbf{cl:} $A$ est diagonalisable, donc il existe $D$, matrice diagonale, et $P$,matrice de passage, tel que 
-\[A=P.D.P^{-1}\]
-\[P=[V_{1} V_{2}]=\begin{pmatrix}
-	1 & 1  \\
-	-1 & 1 
-	
-\end{pmatrix} ~~~;~~~ D=\begin{pmatrix}
-	\lambda_{1} & 0  \\
-	0 & \lambda_{2} 
-	
-\end{pmatrix}=\begin{pmatrix}
-1 & 0  \\
-0 & 3 
-
-\end{pmatrix}\]
-\[P^{-1}=\frac{1}{2}.\begin{pmatrix}
-	1 & -1  \\
-	1 & 1
-\end{pmatrix} \]\\
-\[B=\begin{pmatrix}
-	1 & 1  \\
-	0 & 1 
-	
-\end{pmatrix}\]
-$\lambda_{1}=1$ : Valeur propre double ($\alpha=2$).\\
-$V=\begin{pmatrix}
-	1 \\
-	0  
-	
-\end{pmatrix}$;~~~ \textcolor{red}{$dim E(\lambda)=1\ne \alpha=2$}~~~$\Rightarrow B$ n'est pas diagonalisable.
-\[ C=\begin{pmatrix}
- 	1 & 0 & 0  \\
- 	1 & 2 & 0\\
- 	1 & 0 & -1
- 	
- \end{pmatrix}
-\]
-~~~ \\
-$\lambda_{1}=1$ : Valeur propre simple ($\alpha_{1}=1$).\\
-$\lambda_{2}=2$ : Valeur propre simple ($\alpha_{2}=1$).\\
-$\lambda_{3}=-1$ : Valeur propre simple ($\alpha_{3}=1$).\\~~~ \\
-$V_{1}=\begin{pmatrix}
-	1  \\
-	-1  \\
-	\frac{1}{2}
-	
-\end{pmatrix}$ ~~~;~~~ \textcolor{red}{$dim E(\lambda_{1})=1=\alpha_{1}$}.\\
-~~~ \\
-~~~ \\
-$V_{2}=\begin{pmatrix}
-	0  \\
-	1  \\
-	0
-	
-\end{pmatrix}$ ~~~;~~~ \textcolor{red}{$dim E(\lambda_{2})=1=\alpha_{2}$}.\\
-$V_{3}=\begin{pmatrix}
-	0  \\
-	0  \\
-	1
-	
-\end{pmatrix}$ ~~~;~~~ \textcolor{red}{$dim E(\lambda_{3})=1=\alpha_{3}$}.\\
-
-$C$ est diagonalisable donc il existe une matrice $D$ diagonale et une matrice $P$ tel que $C=P.D.P^{-1}$ avec:\\
-
-\[ D=\begin{pmatrix}
-	1 & 0 & 0  \\
-	0 & 2 & 0\\
-   0 & 0 & -1
-	
-\end{pmatrix} ~~~;~~~P=\begin{pmatrix}
-1 & 0 & 0  \\
--1 & 1 & 0\\
--\frac{1}{2} & 0 & 1
-
-\end{pmatrix}
-\]
- ~~~ \\
- \[ H=\begin{pmatrix}
- 	15 & -2 & 6  \\
- 	21 & -2 & 9\\
- 	-28 & 4 & -11
- 	
- \end{pmatrix}
- \]
- ~~~ \\
- $\lambda_{1}=0$ : Valeur propre simple ($\alpha_{1}=1$).\\
- $\lambda_{2}=1$ : Valeur propre double ($\alpha_{2}=2$).\\
-~~~ \\
-$V_{1}=\begin{pmatrix}
--\frac{1}{2}  \\
-	-\frac{3}{4} \\
-	1
+	\textbf{Propositions:}
+	\begin{itemize}
+		\item Si $\lambda$ est une valeur propre non nulle d'une matrice inversible $A$, alors $\frac{1}{\lambda}$ est une valeur propre de $A^{-1}$.
+		\item Si $\lambda$ est une valeur propre non nulle d'une matrice $A$, alors  $\lambda ^{p}$ est une valeur propre de $A^p$.
+		\item Les valeurs propres d'une matrice triangulaire sont les éléments de sa diagonale principale.
+		\item La somme des valeurs propres de $A$ = trace($A$).
+		\item Le produit des valeurs propres de $A$ = $det(A)$.
+	\end{itemize}
+	\textbf{Exemples:}\\
+	Donner les valeurs propres des matrices suivantes:
+	\[B=\begin{pmatrix}
+		3 & 0 & 0  \\
+		1 & 3 & 0 \\
+		0 & 1 & 2
+		
+	\end{pmatrix}	~~~~~~;~~~~~ C=\begin{pmatrix}
+		1 & 0 & 0  \\
+		0 & 2 & 0 \\
+		0 & 0 & 4
+		
+	\end{pmatrix}\] 
 	
 	
-\end{pmatrix}$ ~~~;~~~~~~~~~~~~~~~~~~~~~~~~~~~ \textcolor{red}{$dim E(\lambda_{1})=1=\alpha_{1}$}.\\
-~~~ \\
-~~~ \\
-$V_{2}=\begin{pmatrix}
-	1  \\
-	7  \\
-	0
+	\subsection{Recherche des vecteurs propres:}
+	\subsubsection{Théorème:}
+	A une valeur propre $\lambda$, on associe une infinité des vecteurs propres tous colinéaires entre eux.\\ $V_{1}$, $V_{2}$ sont colinéaires : $V_{1}=\alpha V_{2}$\\
+	\textbf{Exemple:}
+	\[A=\begin{pmatrix}
+		1 & 0 & 0  \\
+		1 & 2 & 0 \\
+		1 & 0 & -1
+		
+	\end{pmatrix}\] 
+	Déterminer les vecteurs propres de $A$.\\
+	Réponse\\
+	$A$ est une matrice triangulaire donc ses valeurs propres sont:\\
+	$\lambda_{1}=1$; $\lambda_{2}=2$; $\lambda_{3}=-1$\\\\
+	$V=\begin{pmatrix}
+		x  \\
+		y  \\
+		z
+		
+	\end{pmatrix} \in \mathbb{R}^{3}$, est un vecteur propre de $A$ associé à $\lambda_{1}=1$, s'il vérifie l'égalité suivante:\\
+	\[AV=\lambda_{1}V \rightarrow (A-I_{3})V=0\] 
+	\[\begin{pmatrix}
+		0 & 0 & 0  \\
+		1 & 1 & 0 \\
+		1 & 0 & -2
+		
+	\end{pmatrix}.\begin{pmatrix}
+		x   \\
+		y   \\
+		z 
+		
+	\end{pmatrix}=\begin{pmatrix}
+		0   \\
+		0  \\
+		0 
+		
+	\end{pmatrix}\] 
+	\[det(A-I_{3})V=0\]
+	\[\left \{
+	\begin{array}{rcl}
+		x+y&=&0 \\
+		x-2z&=&0
+	\end{array}
+	\right. \Leftrightarrow \left \{
+	\begin{array}{rcl}
+		y&=&-x \\
+		z&=&\frac{1}{2}x\\
+		x& \in& \mathbb{R}
+	\end{array}
+	\right.\Leftrightarrow \left \{
+	\begin{array}{rcl}
+		x&=&x \\
+		y&=&-x\\
+		z&=&\frac{1}{2}x ~~~,~~~x \in \mathbb{R}
+		
+	\end{array}
+	\right.\]
+	\[V=\begin{pmatrix}
+		x  \\
+		-x  \\
+		\frac{1}{2}
+		
+	\end{pmatrix}=x.\begin{pmatrix}
+		1  \\
+		-1  \\
+		\frac{1}{2}
+		
+	\end{pmatrix}=x.V_{1}~~~,~~~ x \in \mathbb{R}\]
+	L'ensemble des vecteurs propres de $A$ associé à $\lambda_{1}$, sont les vecteurs colinéaires à $V_{1}$, cet ensemble s'appelle sous-espace propre de $\lambda_{1}$, noté $E(\lambda_{1})$ et puisque tous les vecteurs de $E(\lambda_{1})$ sont colinéaires à $V_{1}$, on dit que $E(\lambda_{1})$ est engendré par $V_{1}$ et dimension de $E(\lambda_{1})=1$, on écrit $dim E(\lambda_{1})=1$.\\
+	$V=\begin{pmatrix}
+		x  \\
+		y  \\
+		z
+		
+	\end{pmatrix} \in \mathbb{R}^{3}$, est un vecteur propre de $A$ associé à $\lambda_{2}=2$, s'il vérifie l'égalité suivante:\\
+	\[AV=\lambda_{2}V \rightarrow (A-2I_{3})V=0\]
+	\[\begin{pmatrix}
+		-1 & 0 & 0  \\
+		1 & 0 & 0 \\
+		1 & 0 & -3
+		
+	\end{pmatrix}.\begin{pmatrix}
+		x   \\
+		y   \\
+		z 
+		
+	\end{pmatrix}=\begin{pmatrix}
+		0   \\
+		0  \\
+		0 
+		
+	\end{pmatrix}\] 
+	\[det(A-2I_{3})V=0\]
+	\[\left \{
+	\begin{array}{rcl}
+		-x&=&0 \\
+		x&=&0\\
+		x-3z&=&0
+	\end{array}
+	\right. \Leftrightarrow \left \{
+	\begin{array}{rcl}
+		x&=&0 \\
+		y& \in& \mathbb{R}\\
+		z&=&0
+	\end{array}
+	\right.\Leftrightarrow \]
+	\[V=\begin{pmatrix}
+		0  \\
+		y  \\
+		0
+		
+	\end{pmatrix}=y.\begin{pmatrix}
+		0  \\
+		1  \\
+		0
+		
+	\end{pmatrix}=y.V_{2}~~~,~~~ y \in \mathbb{R}\]
+	Le sous-espace propre de $E(\lambda_{2})$ est engendré par $V_{2} $ et $dim E(\lambda_{2}=2)$\\
+	$V=\begin{pmatrix}
+		x  \\
+		y  \\
+		z
+		
+	\end{pmatrix} \in \mathbb{R}^{3}$, est un vecteur propre de $A$ associé à $\lambda_{3}=-1$, s'il vérifie l'égalité suivante:\\
+	\[AV=\lambda_{3}V \rightarrow (A+I_{3})V=0\]
+	\[\begin{pmatrix}
+		2 & 0 & 0  \\
+		1 & 3 & 0 \\
+		1 & 0 & 0
+		
+	\end{pmatrix}.\begin{pmatrix}
+		x   \\
+		y   \\
+		z 
+		
+	\end{pmatrix}=\begin{pmatrix}
+		0   \\
+		0  \\
+		0 
+		
+	\end{pmatrix}\] 
+	\[det(A+I_{3})V=0\]
+	\[\left \{
+	\begin{array}{rcl}
+		2x&=&0 \\
+		x+3y&=&0\\
+		x&=&0
+	\end{array}
+	\right. \Leftrightarrow \left \{
+	\begin{array}{rcl}
+		x&=&0 \\
+		y&=&0\\
+		z&\in& \mathbb{R}
+	\end{array}
+	\right. \]
+	\[V=\begin{pmatrix}
+		0  \\
+		0  \\
+		z
+		
+	\end{pmatrix}=z.\begin{pmatrix}
+		0  \\
+		0  \\
+		1
+		
+	\end{pmatrix}=z.V_{3}~~~,~~~ z \in \mathbb{R}\]
+	Le sous-espace propre de $E(\lambda_{3})$ est engendré par $V_{3} $ et $dim E(\lambda_{3})=1$.\\
+	\textbf{Exemple}\\
+	Soit les matrices suivantes:
+	\[A=\begin{pmatrix}
+		2 & 1  \\
+		1 & 2 
+		
+	\end{pmatrix}~~~; ~~~B=\begin{pmatrix}
+		1 & 1  \\
+		0 & 1 
+		
+	\end{pmatrix}~~~; ~~~C=\begin{pmatrix}
+		15 & -2 & 6  \\
+		21 & -2 & 9\\
+		-28 & 4 & -11
+		
+	\end{pmatrix}
+	\]
+	Déterminer les vecteurs propres correspondants.
+	\section{Diagonalisation des matrices:}
+	\subsection{Définition:}
+	$A$ est une matrice carrée, est diagonalisable s'il existe une matrice inversible \textcolor{red} {$P$}, dite \textcolor{red}{matrice de passage}, et une \textcolor{red}{ matrice diagonale} \textcolor{red}{D}. Tel que: \[A=P.D.P^{-1}\]
+	\subsection{Théorème:}
+	Pour qu'une matrice carrée $A$ soit diagonalisable, il faut et il suffit que la dimension de sous-espace propre associé à $\lambda_{i}$ égale à la multiplicité de cette valeur propre $\lambda_{i}$\\
+	$A$ est \textcolor{red}{diagonalisable ssi:}
+	\[dim E(\lambda_{i})=\alpha_{i}\] Avec $\alpha_{i}$: multiplicité de $ \lambda_{i}$\\
+	\textbf{Remarque:}\\
+	\begin{itemize}
+		\item La matrice digonale $D$ est la matrice des valeurs propres.
+		\item La matrice de passage $P$ est la matrice des vecteurs propes.
+	\end{itemize}
+	\subsection{Exemple:}
+	\[A=\begin{pmatrix}
+		2 & 1  \\
+		1 & 2 
+		
+	\end{pmatrix}\]
+	$\lambda_{1}=1$ : Valeur propre simple ($\alpha_{1}=1$).\\
+	$\lambda_{2}=3$ : Valeur propre simple ($\alpha_{2}=1$).\\\\
+	$V_{1}=\begin{pmatrix}
+		1  \\
+		-1  
+		
+	\end{pmatrix}$ ~~~;~~~ \textcolor{red}{$dim E(\lambda_{1})=1=\alpha_{1}$}.\\
+	$V_{2}=\begin{pmatrix}
+		1  \\
+		1  
+		
+	\end{pmatrix}$ ~~~;~~~ \textcolor{red}{$dim E(\lambda_{2})=1=\alpha_{2}$}.\\
+	\textbf{cl:} $A$ est diagonalisable, donc il existe $D$, matrice diagonale, et $P$,matrice de passage, tel que: 
+	\[A=P.D.P^{-1}\]
+	\[P=[V_{1} V_{2}]=\begin{pmatrix}
+		1 & 1  \\
+		-1 & 1 
+		
+	\end{pmatrix} ~~~;~~~ D=\begin{pmatrix}
+		\lambda_{1} & 0  \\
+		0 & \lambda_{2} 
+		
+	\end{pmatrix}=\begin{pmatrix}
+		1 & 0  \\
+		0 & 3 
+		
+	\end{pmatrix}\]
+	\[P^{-1}=\frac{1}{2}.\begin{pmatrix}
+		1 & -1  \\
+		1 & 1
+	\end{pmatrix} \]\\
+	\[B=\begin{pmatrix}
+		1 & 1  \\
+		0 & 1 
+		
+	\end{pmatrix}\]
+	$\lambda_{1}=1$ : Valeur propre double ($\alpha=2$).\\
+	$V=\begin{pmatrix}
+		1 \\
+		0  
+		
+	\end{pmatrix}$;~~~ \textcolor{red}{$dim E(\lambda)=1\ne \alpha=2$}~~~$\Rightarrow B$ n'est pas diagonalisable.
+	\[ C=\begin{pmatrix}
+		1 & 0 & 0  \\
+		1 & 2 & 0\\
+		1 & 0 & -1
+		
+	\end{pmatrix}
+	\]
+	~~~ \\
+	$\lambda_{1}=1$ : Valeur propre simple ($\alpha_{1}=1$).\\
+	$\lambda_{2}=2$ : Valeur propre simple ($\alpha_{2}=1$).\\
+	$\lambda_{3}=-1$ : Valeur propre simple ($\alpha_{3}=1$).\\~~~ \\
+	$V_{1}=\begin{pmatrix}
+		1  \\
+		-1  \\
+		\frac{1}{2}
+		
+	\end{pmatrix}$ ~~~;~~~ \textcolor{red}{$dim E(\lambda_{1})=1=\alpha_{1}$}.\\
+	~~~ \\
+	~~~ \\
+	$V_{2}=\begin{pmatrix}
+		0  \\
+		1  \\
+		0
+		
+	\end{pmatrix}$ ~~~;~~~ \textcolor{red}{$dim E(\lambda_{2})=1=\alpha_{2}$}.\\
+	$V_{3}=\begin{pmatrix}
+		0  \\
+		0  \\
+		1
+		
+	\end{pmatrix}$ ~~~;~~~ \textcolor{red}{$dim E(\lambda_{3})=1=\alpha_{3}$}.\\
 	
-\end{pmatrix}$ ~~~;~~~$V_{3}=\begin{pmatrix}
-0  \\
-3  \\
-1
-
-\end{pmatrix}$ ~~~;~~~ \textcolor{red}{$dim E(\lambda_{2})=2=\alpha_{2}$}.\\
-
- $H$ est une matrice diagonalisable donc il existe une matrice $D$ diagonale et une matrice $P$ tel que $H=P.D.P^{-1}$ avec:\\
- 
- \[ D=\begin{pmatrix}
- 	0 & 0 & 0  \\
- 	0 & 1 & 0\\
- 	0 & 0 & 1
- 	
- \end{pmatrix} ~~~;~~~P=\begin{pmatrix}
- 	-\frac{1}{2} & 1 & 0  \\
- 	-\frac{3}{4} & 7 & 3\\
- 	 0& 0 & 1
- 	
- \end{pmatrix}
- \]
- \subsection{Application:Calcul de $A^n$}
- $A$ est une matrice carrée diagonalisable, Calculer $A^2$.
- \begin{center}
- 	$A^2=A.A$ ~~~ or ~~~ $A=P.D.P^{-1}$\\
- \end{center}
- 	D'où 
- \begin{center}
-    $A^{2}=P.D.P^{-1}.P.D.P^{-1}=P.D^2.P^{-1}$\\
-    $A^{3}=A^{2}.A=P.D^{2}.P^{-1}.P.D.P^{-1}=P.D^3.P^{-1}$\\
-     .\\
-     .\\
-     .\\
-    $A^n=P.D^n.P^{-1}$\\
-    $A^{n+1}=A^n.A=P.D^n.P^{-1}.P.D.P^{-1}=P.D^{n+1}.P^{-1}$ 
-    
- \end{center}
- 
- 
-
-
-
+	$C$ est diagonalisable donc il existe une matrice $D$ diagonale et une matrice $P$ tel que $C=P.D.P^{-1}$ avec:\\
+	
+	\[ D=\begin{pmatrix}
+		1 & 0 & 0  \\
+		0 & 2 & 0\\
+		0 & 0 & -1
+		
+	\end{pmatrix} ~~~;~~~P=\begin{pmatrix}
+		1 & 0 & 0  \\
+		-1 & 1 & 0\\
+		-\frac{1}{2} & 0 & 1
+		
+	\end{pmatrix}
+	\]
+	~~~ \\
+	\[ H=\begin{pmatrix}
+		15 & -2 & 6  \\
+		21 & -2 & 9\\
+		-28 & 4 & -11
+		
+	\end{pmatrix}
+	\]
+	~~~ \\
+	$\lambda_{1}=0$ : Valeur propre simple ($\alpha_{1}=1$).\\
+	$\lambda_{2}=1$ : Valeur propre double ($\alpha_{2}=2$).\\
+	~~~ \\
+	$V_{1}=\begin{pmatrix}
+		-\frac{1}{2}  \\
+		-\frac{3}{4} \\
+		1
+		
+		
+	\end{pmatrix}$ ~~~;~~~~~~~~~~~~~~~~~~~~~~~~~~~ \textcolor{red}{$dim E(\lambda_{1})=1=\alpha_{1}$}.\\
+	~~~ \\
+	~~~ \\
+	$V_{2}=\begin{pmatrix}
+		1  \\
+		7  \\
+		0
+		
+	\end{pmatrix}$ ~~~;~~~$V_{3}=\begin{pmatrix}
+		0  \\
+		3  \\
+		1
+		
+	\end{pmatrix}$ ~~~;~~~ \textcolor{red}{$dim E(\lambda_{2})=2=\alpha_{2}$}.\\
+	
+	$H$ est une matrice diagonalisable donc il existe une matrice $D$ diagonale et une matrice $P$ tel que $H=P.D.P^{-1}$ avec:\\
+	
+	\[ D=\begin{pmatrix}
+		0 & 0 & 0  \\
+		0 & 1 & 0\\
+		0 & 0 & 1
+		
+	\end{pmatrix} ~~~;~~~P=\begin{pmatrix}
+		-\frac{1}{2} & 1 & 0  \\
+		-\frac{3}{4} & 7 & 3\\
+		0& 0 & 1
+		
+	\end{pmatrix}
+	\]
+	\subsection{Application: Calcul de $A^n$}
+	$A$ est une matrice carrée diagonalisable, Calculer $A^2$.
+	\begin{center}
+		$A^2=A.A$ ~~~ or ~~~ $A=P.D.P^{-1}$\\
+	\end{center}
+	D'où 
+	\begin{center}
+		$A^{2}=P.D.P^{-1}.P.D.P^{-1}=P.D^2.P^{-1}$\\
+		$A^{3}=A^{2}.A=P.D^{2}.P^{-1}.P.D.P^{-1}=P.D^3.P^{-1}$\\
+		.\\
+		.\\
+		.\\
+		$A^n=P.D^n.P^{-1}$\\
+		$A^{n+1}=A^n.A=P.D^n.P^{-1}.P.D.P^{-1}=P.D^{n+1}.P^{-1}$ 
+		
+	\end{center}
+	
+	
+	
+	
+	
 \end{document}
+
